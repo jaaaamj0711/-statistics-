@@ -1,19 +1,50 @@
-![image](https://user-images.githubusercontent.com/55734436/98835502-d94dc380-2483-11eb-9950-a17c1a0432a4.png)
-![image](https://user-images.githubusercontent.com/55734436/98835578-f2ef0b00-2483-11eb-8189-b9a50050e68b.png)
-![image](https://user-images.githubusercontent.com/55734436/98835591-f71b2880-2483-11eb-80dc-91efb0ad5250.png)
-![image](https://user-images.githubusercontent.com/55734436/98835599-f97d8280-2483-11eb-9fc2-ed3f8676eca1.png)
-![image](https://user-images.githubusercontent.com/55734436/98835606-fc787300-2483-11eb-9dc1-f7540cf25d47.png)
-![image](https://user-images.githubusercontent.com/55734436/98835615-ff736380-2483-11eb-849d-5643e38728ab.png)
-![image](https://user-images.githubusercontent.com/55734436/98835628-026e5400-2484-11eb-911e-0c5cc4802c79.png)
-![image](https://user-images.githubusercontent.com/55734436/98835634-04d0ae00-2484-11eb-86d2-4af2cba36384.png)
-![image](https://user-images.githubusercontent.com/55734436/98835649-07330800-2484-11eb-9b54-9077f312e158.png)
-![image](https://user-images.githubusercontent.com/55734436/98835662-0b5f2580-2484-11eb-8134-3f4ec624cfec.png)
-![image](https://user-images.githubusercontent.com/55734436/98835685-11550680-2484-11eb-9da3-74f541f1e4fc.png)
-![image](https://user-images.githubusercontent.com/55734436/98835694-131eca00-2484-11eb-900b-6a46e73f6805.png)
-![image](https://user-images.githubusercontent.com/55734436/98835699-14e88d80-2484-11eb-8968-91d3484f641e.png)
-![image](https://user-images.githubusercontent.com/55734436/98835707-16b25100-2484-11eb-8ac5-995436657f7e.png)
-![image](https://user-images.githubusercontent.com/55734436/98835723-1a45d800-2484-11eb-9d05-c4057eeeea03.png)
-![image](https://user-images.githubusercontent.com/55734436/98835730-1d40c880-2484-11eb-9192-78e7452745c4.png)
-![image](https://user-images.githubusercontent.com/55734436/98835743-203bb900-2484-11eb-8aeb-ab8cd1ac101c.png)
-![image](https://user-images.githubusercontent.com/55734436/98835751-2336a980-2484-11eb-904a-73cb172872ba.png)
-![image](https://user-images.githubusercontent.com/55734436/98835781-2b8ee480-2484-11eb-9edc-4bb0f7ba7c24.png)
+##전진선택법(Forward Selectin)(Forward Selection)
+: 변수를 각 기여도에 따라서 하나씩 추가하는 방법
+
+ 
+
+장점: 계산 시간이 빠르다.
+
+단점: 한번 선택된 변수는 절대 제거되지 않기 때문에 중요하지 않은 변수가 남아 있을 수 있다.
+
+알고리즘 구조
+
+1) 상수항만 포함된 모형에서 시작한다.
+
+2) 기존 모형과 변수를 하나 추가한 모형중에서 모형 선택 기준을 통하여 가장 좋은 모형을 선택한다.
+
+3) 2단계에서 선택된 모형이 기존의 모형일 때까지 반복한다.
+
+후진소거법(Backward Elimination)
+: 모든 변수를 포함하는 모형에서 불필요한 변수를 하나씩 제거하는 방법
+
+ 
+
+장점: 계산 시간이 빠르다.
+
+단점: 한번 소거된 변수는 다시 선택되지 못하기 때문에 중요한 변수가 제거될 위험이 있다.
+
+알고리즘 구조
+
+1) 모든 변수가 포함된 모형에서 시작한다.
+
+2) 기존의 모형과 변수를 하나 제거한 모형중에서 모형 선택 기준을 통하여 가장 좋은 모형을 선택한다.
+
+3) 2단계에서 선택된 모형이 기존의 모형일 때까지 반복한다.
+
+단계적 방법(Stepwise method)
+: 단계 선택과 소거를 반복하면서 중요한 변수를 찾아내는 방법
+
+ 
+
+장점: 선택되었던 변수가 소거될 수도 있고 소거되었던 변수가 다시 선택될 수도 있다(다시 말하자면 전진선택법과 후진소거법의 단점을 개선한 방법이다.)
+
+단점: 시간이 오래걸린다.
+
+알고리즘 구조
+
+1) 적절한 모형에서 시작한다.
+
+2) 기존의 모형, 변수를 하나 제거한 모형, 변수를 하나 추가한 모형 중에서 모형 선택 기준을 통해 가장 좋은 모형을 선택한다.
+
+3) 2단계에서 선택된 모형이 기존의 모형일 때까지 반복한다
