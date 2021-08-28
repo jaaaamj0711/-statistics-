@@ -1,10 +1,4 @@
-msleep
-library(dplyr)
-library(knitr)
-library(ggplot2)
-msleep
-
-food_consumption
+## Create two data frames: one that holds the rows of food_consumption for "Belgium" and the another that holds rows for "USA". Call these belgium_consumption and usa_consumption.##
 
 # Filter for Belgium
 belgium_consumption <- food_consumption %>%
@@ -24,7 +18,6 @@ median(belgium_consumption$consumption)
 mean(usa_consumption$consumption)
 median(usa_consumption$consumption)
 
-
 food_consumption %>%
   # Filter for Belgium and USA
   filter(country %in% c("Belgium", "USA")) %>%
@@ -32,8 +25,7 @@ food_consumption %>%
   group_by(country)%>%
   # Get mean_consumption and median_consumption
   summarize(mean_consumption = mean(consumption),
-            median_consumption = median(consumption))
-
+      median_consumption = median(consumption))
 
 food_consumption %>%
   # Filter for rice food category
@@ -42,10 +34,8 @@ food_consumption %>%
   ggplot(aes(x= co2_emission)) +
   geom_histogram()
 
-food_consumption %>%
-  # Filter for rice food category
-  filter(food_category == "rice") %>% 
-  # Get mean_co2 and median_co2
-  summarize(mean_co2 = mean(co2_emission),
-            median_co2 = median(co2_emission))
+
+# Calculate the quartiles of co2_emission
+quantile(food_consumption$co2_emission)
+
 
